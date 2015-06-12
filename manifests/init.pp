@@ -22,7 +22,7 @@ class spaarti (
     command => "sudo -u ${::boxen_user} spaarti",
     user => 'root'
   } ->
-  exec { 'repo_sync':
-    cwd => $::boxen_srcdir
+  exec { "/Users/${::boxen_user}/.bin/repo_sync":
+    cwd  => $::boxen_srcdir
   }
 }
