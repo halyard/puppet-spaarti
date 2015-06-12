@@ -14,7 +14,7 @@ class spaarti (
     ruby_version => '*'
   } ->
   exec { 'spaarti':
-    provider => 'posix',
+    provider => 'shell',
     require  => Class['::dotfiles']
   } ->
   exec { 'repo_sync':
