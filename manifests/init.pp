@@ -15,7 +15,7 @@ class spaarti (
   } ->
   file { "/Users/${::boxen_user}/.octoauth.d/spaarti.yml":
     content => template('spaarti/octoauth.yml'),
-    mode    => '0400',
+    mode    => '0600',
     require  => Class['::dotfiles']
   } ->
   exec { 'spaarti':
