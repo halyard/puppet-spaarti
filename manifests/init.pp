@@ -14,7 +14,8 @@ class spaarti (
     ruby_version => '*'
   } ->
   exec { 'spaarti':
-    require => Class['::dotfiles']
+    provider => 'posix',
+    require  => Class['::dotfiles']
   } ->
   exec { 'repo_sync':
     cwd => $::boxen_srcdir
