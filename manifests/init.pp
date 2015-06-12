@@ -13,9 +13,14 @@ class spaarti (
     gem          => 'spaarti',
     ruby_version => '*'
   } ->
-  exec { 'spaarti':
-    provider => 'shell',
+  file { "/Users/${::boxen_user}/.octoauth.d/spaarti.yml":
+    content => template('spaarti/octoauth.yml'),
+    mode    => '0400',
     require  => Class['::dotfiles']
+  } ->
+  exec { 'spaarti':
+    command => "sudo -u ${::boxen_user} spaarti",
+    user => 'root'
   } ->
   exec { 'repo_sync':
     cwd => $::boxen_srcdir

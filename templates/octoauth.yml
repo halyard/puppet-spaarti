@@ -1,0 +1,3 @@
+---
+spaarti: <%= Facter.value(:github_token) %>
+
