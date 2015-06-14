@@ -19,10 +19,10 @@ class spaarti (
     require  => Class['::dotfiles']
   } ->
   exec { 'spaarti':
-    command => "sudo -u ${::boxen_user} spaarti",
-    user => 'root'
+    timeout => 0
   } ->
   exec { "/Users/${::boxen_user}/.bin/repo_sync":
-    cwd  => $::boxen_srcdir
+    cwd     => $::boxen_srcdir,
+    timeout => 0
   }
 }
