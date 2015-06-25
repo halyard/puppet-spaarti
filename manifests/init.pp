@@ -23,5 +23,10 @@ class spaarti (
     user     => 'root',
     timeout  => 0,
     schedule => 'daily'
+  } ->
+  exec { "/Users/${::boxen_user}/.bin/repo_sync":
+    cwd      => $::boxen_srcdir,
+    timeout  => 0,
+    schedule => 'daily'
   }
 }
