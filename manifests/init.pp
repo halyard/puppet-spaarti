@@ -22,7 +22,8 @@ class spaarti (
     command  => "sudo -u ${::boxen_user} spaarti",
     user     => 'root',
     timeout  => 0,
-    schedule => 'daily'
+    schedule => 'daily',
+    require  => Class['::ssh']
   } ->
   exec { "/Users/${::boxen_user}/.bin/repo_sync":
     cwd      => $::boxen_srcdir,
