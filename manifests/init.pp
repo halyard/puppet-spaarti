@@ -16,7 +16,7 @@ class spaarti (
   file { "/Users/${::boxen_user}/.octoauth.d/spaarti.yml":
     content => template('spaarti/octoauth.yml'),
     mode    => '0600',
-    require  => Class['::dotfiles']
+    require => Class['::dotfiles']
   } ->
   exec { 'spaarti':
     command  => "sudo -u ${::boxen_user} spaarti",
