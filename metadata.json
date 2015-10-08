@@ -1,0 +1,22 @@
+{
+  "name": "halyard-spaarti",
+  "version": "0.1.0",
+  "author": "Les Aker",
+  "license": "MIT",
+  "summary": "Configure spaarti via Boxen",
+  "source": "https://github.com/halyard/puppet-spaarti",
+  "project_page": "https://github.com/halyard/puppet-spaarti",
+  "issues_url": "https://github.com/halyard/puppet-spaarti/issues",
+  "dependencies": [
+
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Darwin",
+      "operatingsystemmajrelease": [
+        "14",
+        "15"
+      ]
+    }
+  ]
+}
