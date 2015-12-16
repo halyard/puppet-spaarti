@@ -8,6 +8,7 @@
 #   Explanation of what this parameter affects and what it defaults to.
 #
 class spaarti (
+  $codedir = "/Users/${::user}/src"
 ) {
   ruby_gem { 'spaarti':
     gem          => 'spaarti',
@@ -26,7 +27,7 @@ class spaarti (
     require  => Class['::ssh']
   } ->
   exec { "/Users/${::user}/.bin/repo_sync":
-    cwd      => $::codedir,
+    cwd      => $codedir,
     timeout  => 0,
     schedule => 'daily'
   }
