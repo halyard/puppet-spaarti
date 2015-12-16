@@ -8,7 +8,18 @@
   "project_page": "https://github.com/halyard/puppet-spaarti",
   "issues_url": "https://github.com/halyard/puppet-spaarti/issues",
   "dependencies": [
-
+    {
+      "name": "halyard/rubyenv",
+      "version_requirement": "0.0.x"
+    },
+    {
+      "name": "halyard/dotfiles",
+      "version_requirement": "0.1.x"
+    },
+    {
+      "name": "halyard/ssh",
+      "version_requirement": "0.0.x"
+    }
   ],
   "operatingsystem_support": [
     {
