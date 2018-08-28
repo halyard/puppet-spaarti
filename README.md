@@ -3,7 +3,7 @@ spaarti
 
 [![Puppet Forge](https://img.shields.io/puppetforge/v/halyard/spaarti.svg)](https://forge.puppetlabs.com/halyard/spaarti)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-green.svg)](https://tldrlegal.com/license/mit-license)
-[![Build Status](https://img.shields.io/circleci/project/halyard/puppet-spaarti/master.svg)](https://circleci.com/gh/halyard/puppet-spaarti)
+[![Build Status](https://img.shields.io/travis/com/halyard/puppet-spaarti.svg)](https://travis-ci.com/halyard/puppet-spaarti)
 
 Module to clone repos from GitHub using [spaarti](https://github.com/akerl/spaarti)
 
